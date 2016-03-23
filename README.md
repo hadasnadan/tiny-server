@@ -1,8 +1,8 @@
 
-## Pack of sample apps in node.js, to demonstrate backend principles
+### Pack of sample apps written in node.js, to demonstrate backend principles
 
 
-### Installation 
+#### Installation 
 
 ```
 yum install nodejs npm --enablerepo=epel
