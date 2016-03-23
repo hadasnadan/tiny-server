@@ -1,5 +1,5 @@
 
-## Sample tiny server built on node.js, uses restify
+## Pack of sample apps in node.js, to demonstrate backend principles
 
 
 ### Installation 
