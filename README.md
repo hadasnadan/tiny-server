@@ -1,7 +1,8 @@
 
-# Sample tiny server built on node.js, uses restify
+## Sample tiny server built on node.js, uses restify
 
-## Installation 
+
+### Installation 
 
 ```
 yum install nodejs npm --enablerepo=epel
