@@ -1,5 +1,6 @@
 {
     "dependencies": {
-    	"restify":"4.0.4"
+    	"restify":"4.0.4",
+	"moment":"2.12.0"
     }
 }
