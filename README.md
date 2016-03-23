@@ -11,3 +11,9 @@ git clone https://github.com/sharondagan/tiny-server.git
 cd tiny-server
 npm install
 ```
+
+To install beanstakd:
+
+```
+yum install beanstalkd --enablerepo=epel
+```
