@@ -1,7 +1,8 @@
 {
-    "dependencies": {
-    	"restify":"4.0.4",
-	"moment":"2.12.0",
-	"nodestalker":"0.1.21"
-    }
+	"dependencies": {
+		"restify":"4.0.4",
+		"moment":"2.12.0",
+		"nodestalker":"0.1.21",
+		"redis":"2.6.0-1"
+	}
 }
