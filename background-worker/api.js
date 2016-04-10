@@ -9,6 +9,10 @@ client.use('default');
 var server = restify.createServer();
 server.use(restify.queryParser());
 
+server.get("/", function (req, res, next){
+  res.send(200, {result:"ok"});
+})
+
 server.post("/:id", function (req, res, next){
   console.log("got GET request at "+ moment().format('h:mm:ss'));
 
