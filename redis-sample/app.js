@@ -45,7 +45,7 @@ function nthFibonacci(n) {
 server.get("/loaderio-6c90ecae45950a945eaa8652c84d0528.txt", function (req, res, next){
     res.write("loaderio-6c90ecae45950a945eaa8652c84d0528");
     res.end();
-}
+})
 
 server.get("/tests", function (req, res, next){
     res.send(200, {
