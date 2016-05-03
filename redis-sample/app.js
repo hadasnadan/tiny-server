@@ -8,8 +8,11 @@ var redisClient = redis.createClient({
     port:6739
 })
 
-
 server.use(restify.queryParser());
+
+server.get("/", function (req, res, next){
+    res.send(200, {result:"ok"});
+})
 
 server.get("/fibonacci/:n", function (req, res, next){
     console.log("got GET request at "+ moment().format('h:mm:ss'));
