@@ -2,7 +2,7 @@ var restify = require('restify');
 var moment = require('moment');
 
 var bs = require('nodestalker'),
-    client = bs.Client('127.0.0.1:11300');
+    client = bs.Client('54.165.232.251:11300');
 
 client.use('default');
 
