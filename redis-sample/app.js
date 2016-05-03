@@ -14,6 +14,27 @@ server.get("/", function (req, res, next){
     res.send(200, {result:"ok"});
 })
 
+server.get("/tests", function (req, res, next){
+    res.send(200, {
+            "keys": ["number"] ,
+            "values": [
+                [0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10]
+            ]
+        }
+    );
+})
+
+
 server.get("/fibonacci/:n", function (req, res, next){
     console.log("got GET request at "+ moment().format('h:mm:ss'));
 
