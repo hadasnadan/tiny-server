@@ -4,7 +4,7 @@ var redis = require('redis');
 
 var server = restify.createServer();
 var redisClient = redis.createClient({
-    host:"redis-host-here",
+    host:"52.91.196.219",
     port:6739
 })
 
@@ -15,16 +15,22 @@ server.get("/fibonacci/:n", function (req, res, next){
     console.log("got GET request at "+ moment().format('h:mm:ss'));
 
     var from = moment();
-
+    
     var n=req.params.n;
-    var result = nthFibonacci(n);
 
-    var to = moment();
+    redisClient.get("fib_"+n, function(err, result){
+        if (!result) {
+            result = nthFibonacci(n);
+            redisClient.set("fib_" + n, result)
+        }
 
-    res.send(200, {
-        result:result,
-        timeTaken: moment.utc(to.diff(from)).format("HH:mm:ss.SSS")
-    });
+        var to = moment();
+
+        res.send(200, {
+            result:result,
+            timeTaken: moment.utc(to.diff(from)).format("HH:mm:ss.SSS")
+        });
+    })
 })
 
 function nthFibonacci(n) {
