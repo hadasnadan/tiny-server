@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"restify":"4.0.4",
+		"node-png":"0.4.3"
+	}
+}
